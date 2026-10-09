@@ -1,48 +1,77 @@
-# Stockroom - Product Dashboard (React)
+# 📦 Stockroom — Product Dashboard
 
-A simple admin page where you can manage your products.
+Stockroom is a simple, responsive product dashboard built with **React** and **Vite**. Keep track of your products, prices, and stock levels in one place.
 
-## What you can do
-- Add a new product (the form checks your input and shows clear messages)
-- See all products in a list
-- Change the price and stock of a product (Edit button)
-- Delete a product (it asks "Are you sure?" first)
-- Search products by name
-- Show only one category
-- Use it on a phone, tablet or computer
-- Your products are saved in the browser, so they are still there after a refresh
+## ✨ Features
 
-## How to run it
-1. Install Node.js (version 18 or newer) from https://nodejs.org
-2. Open a terminal inside this folder and type:
+- ➕ Add products with helpful validation.
+- 🔎 Search products by name and filter by category.
+- ✏️ Update product prices and stock quantities.
+- 🗑️ Delete products after confirming the action.
+- 📊 View inventory totals and products that need restocking.
+- 📱 Manage your products on desktop, tablet, or mobile.
+- 💾 Keep product data saved in your browser between visits.
 
-       npm install
-       npm run dev
+## 🚀 Getting started
 
-3. Open the link shown in the terminal (usually http://localhost:5173)
+### 📋 Prerequisites
 
-## What is inside each file
-    src/
-      App.jsx                    main page, keeps all the data and actions
-      index.css                  all colours and styles
-      data/products.js           categories, currency, price format, sample products
-      hooks/useLocalStorage.js   saves the products in the browser
-      components/
-        Button.jsx               reusable button
-        Field.jsx                reusable label + input + error message
-        Modal.jsx                reusable pop-up box
-        ProductForm.jsx          form to add a product
-        SearchFilter.jsx         search box + category dropdown
-        ProductTable.jsx         product list (cards on phones)
-        StockBadge.jsx           In stock / Low stock / Out of stock label
-        EditModal.jsx            pop-up to change price and stock
-        ConfirmDelete.jsx        "Are you sure?" pop-up
-        EmptyState.jsx           message when there is nothing to show
-        Summary.jsx              the three numbers at the top
+Install [Node.js 18 or later](https://nodejs.org). npm comes with Node.js.
 
-## Easy changes
-- New or renamed category: edit `CATEGORIES` in `src/data/products.js`
-- Different currency: edit `CURRENCY` in the same file
-- "Low stock" limit: edit `LOW_STOCK_LIMIT` in the same file
-- Colours: edit the variables at the top of `src/index.css`
-- Want the sample products back? Clear the site data in your browser and refresh.
+### 💻 Run locally
+
+Clone the repository, install the dependencies, and start the development server:
+
+```sh
+git clone https://github.com/PradipPach/product-dashboard.git
+cd product-dashboard
+npm install
+npm run dev
+```
+
+Open the address printed in your terminal. It is usually <http://localhost:5173>.
+
+### 🏗️ Build for production
+
+Create an optimized production build:
+
+```sh
+npm run build
+```
+
+To preview the production build on your computer, run:
+
+```sh
+npm run preview
+```
+
+## 🗂️ Project structure
+
+```text
+src/
+├── App.jsx                    Main page and product management
+├── index.css                  Application styles
+├── main.jsx                   React entry point
+├── data/
+│   └── products.js            Sample products, categories, and currency settings
+├── hooks/
+│   └── useLocalStorage.js     Saves product data in the browser
+└── components/                Reusable forms, dialogs, filters, and display components
+```
+
+## 🛠️ Customization
+
+- Edit `CATEGORIES` in `src/data/products.js` to change the available categories.
+- Edit `CURRENCY` in that file to change how prices are displayed.
+- Edit `LOW_STOCK_LIMIT` to adjust when a product is flagged as low on stock.
+- Change the CSS variables near the top of `src/index.css` to update the colors.
+
+Product data is stored in your browser. To restore the sample products, clear this site's browser storage and reload the page.
+
+## 👤 Author
+
+Created by **Pradip Pachapol**.
+
+## 🔗 Repository
+
+[⭐ View the project on GitHub](https://github.com/PradipPach/product-dashboard)
